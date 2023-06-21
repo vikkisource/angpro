@@ -1,91 +1,91 @@
 [
   {
   "id":1,
-    "question":"What is php?",
+    "question":"What do you understand by HTML?",
     "answer":[
           {
-            "isoption":"All above",
+            "isoption":"HTML describes the structure of a webpage",
               "isanswer":false
           },
           {
-            "isoption":"Front-End",
+            "isoption":"HTML is the standard markup language mainly used to create web pages",
               "isanswer":false
           },
           {
-            "isoption":"Hypertext Preprocessor",
+            "isoption":"All of the above",
               "isanswer":true
           }
     ]
 },
 {
   "id":2,
-    "question":"What is js?",
+    "question":"Who is the father of HTML?",
     "answer":[
       {
-        "isoption":"JavaScript",
+        "isoption":"Rasmus Lerdorf",
           "isanswer":false
       },
       {
-        "isoption":"Scripting language",
-          "isanswer":false
-      },
-      {
-        "isoption":"All above",
+        "isoption":"Tim Berners-Lee",
           "isanswer":true
+      },
+      {
+        "isoption":"Brendan Eich",
+          "isanswer":false
       }
 ]
 },
 {
   "id":3,
-    "question":"what is sass?",
+    "question":"HTML stands for ___",
     "answer":[
       {
-        "isoption":"Using for style",
+        "isoption":"HyperText Markup Language",
           "isanswer":true
       },
       {
-        "isoption":"It is Backend ",
+        "isoption":"HyperText Machine Language",
           "isanswer":false
       },
       {
-        "isoption":"It is Front-End",
+        "isoption":"HyperText Marking Language",
           "isanswer":false
       }
 ]
 },
 {
   "id":4,
-    "question":"CSS stands for",
+    "question":"Which is used to read an HTML page and render it?",
     "answer":[
       {
-        "isoption":"Cascading Stylesheet",
+        "isoption":"Web server",
+          "isanswer":false
+      },
+      {
+        "isoption":"Web network",
+          "isanswer":false
+      },
+      {
+        "isoption":"Web browser",
           "isanswer":true
-      },
-      {
-        "isoption":"Chart services",
-          "isanswer":false
-      },
-      {
-        "isoption":"Stylesheet of character",
-          "isanswer":false
       }
 ]
 },
 {
   "id":5,
-    "question":"HTML stand for?",
+    "question":"Which tag is used for inserting the largest heading in HTML?",
     "answer":[
       {
-        "isoption":"Hyper transfer Making Language",
+        "isoption":"head",
           "isanswer":false
       },
       {
-        "isoption":" Hyper Text Markup Language",
+        "isoption":"heading",
+          "isanswer":false
+      },
+      {
+        "isoption":"h1",
           "isanswer":true
-      },
-      {
-        "isoption":"High Transfer Mailing",
-          "isanswer":false
       }
 ]
 }
