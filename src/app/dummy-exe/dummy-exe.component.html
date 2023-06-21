@@ -61,9 +61,10 @@
     <button class="btn btn-primary" (click)="next()">Submit</button>
   </div>
   <div class="text-center">
-    <button class="btn btn-warning" (click)="finish()">Exit</button>
+    <button class="btn btn-warning" (click)="exit();isterminate=true;">Exit</button>
   </div>
   </div>
+  <!-- <p>Your answer is:{{this.favoriteanswer}}</p> -->
 
   <div *ngIf="isfinished" class="text-center">
     <h1 class="text-center text-info">Good <span class="finName">{{this.empForm.value['name'] }}</span></h1>

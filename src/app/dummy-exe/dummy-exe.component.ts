@@ -11,7 +11,7 @@ import { Observable,Subscription, interval } from 'rxjs';
 })
 export class DummyExeComponent {
   totalnumber:any[] = [];
-  favoriteanswer!: string;
+  favoriteanswer: string = 'null';
   correctanswer:number;
   empForm: FormGroup;
   currentnumber:number;
@@ -21,6 +21,7 @@ export class DummyExeComponent {
   isfinished:boolean =false;
    isstarted:boolean=false;
    isterminate:boolean=false;
+   issomewrong:boolean = false;
      subscribtion: Subscription [] =[];
   constructor(private http:HttpClient,private _fb: FormBuilder,){
    this.empForm = this._fb.group({
@@ -41,7 +42,11 @@ export class DummyExeComponent {
     })
   }
   next(){
-    this.getoutdata();
+
+    if(this.favoriteanswer != 'null'){
+      this.getoutdata();
+
+
     if(this.currentnumber < this.totalnumber.length){
       this.currentnumber++;
       this.remintime=20;
@@ -55,6 +60,11 @@ export class DummyExeComponent {
       // console.log(this.correctanswer);
     }
   }
+  else{
+    alert('Select your answer');
+  }
+
+  }
   quize(){
 
    this.subscribtion.push( this.timer.subscribe(res=>{
@@ -63,8 +73,14 @@ export class DummyExeComponent {
         this.remintime--;
       }
       if(this.remintime == 0){
+        if(this.favoriteanswer == 'null'){
 
+          this.issomewrong = true;
+          // alert(this.issomewrong);
+        this.exit();
+        }else{
         this.next();
+        }
 
       }
       // console.log(res);
@@ -81,11 +97,24 @@ export class DummyExeComponent {
     this.isfinished=true;
     this.isstarted=false;
 
-
+    this.isterminate = false;
+    this.issomewrong = false;
   }
   exit(){
+    if(this.isterminate == true){
+      if(confirm('Are you Sure?')){
+        this.finish();
+      }
+
+    }
+    if(this.issomewrong == true){
+      alert('Sorry! some thing went wrong. Try Again');
+      this.finish();
+      }
       this.correctanswer=0;
     this.isfinished=false;
+
+
   }
   onFormSubmit() {
     if (this.empForm.valid) {
