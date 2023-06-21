@@ -15,7 +15,7 @@ export class DummyExeComponent {
   correctanswer:number;
   empForm: FormGroup;
   currentnumber:number;
-   remintime:number = 5000;
+   remintime:number = 20;
     timer =interval(1000);
     isformvalid:boolean =false;
   isfinished:boolean =false;
@@ -44,7 +44,7 @@ export class DummyExeComponent {
     this.getoutdata();
     if(this.currentnumber < this.totalnumber.length){
       this.currentnumber++;
-      this.remintime=5000;
+      this.remintime=20;
       this.favoriteanswer = 'null';
 
 
@@ -77,7 +77,7 @@ export class DummyExeComponent {
       element.unsubscribe();
   });
     this.currentnumber =0;
-    this.remintime=5000;
+    this.remintime=20;
     this.isfinished=true;
     this.isstarted=false;
 
