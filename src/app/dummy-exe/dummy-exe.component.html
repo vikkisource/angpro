@@ -1,0 +1,78 @@
+
+<main class="">
+<div class="col-12 container col-sm-10 col-md-8 col-lg-6">
+  <div *ngIf="!isstarted && !isfinished" >
+  <div>
+    <h1 class="text-center text-primary p-3 quizTitle">Quiz</h1>
+  </div>
+  <div class="alert alert-info" role="alert">
+    Welcome user! This is my simple Programming Languages Quiz. Let's to check our programming skill.
+  </div>
+
+  <div class=" d-flex align-items-center justify-content-center">
+
+  <form class="col-10 col-sm-10 col-md-6  text-center" [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+    <div class="alert alert-danger p-1" role="alert" *ngIf="isformvalid">
+      Invalid form
+    </div>
+    <div class="form-group mb-2">
+      <label for="exampleFormControlInput1" class="mb-1">Your Sweet Name</label>
+      <input type="text" matInput  class="form-control" id="exampleFormControlInput1" placeholder="John"  formControlName="name" required>
+    </div>
+    <button type="submit"  class="btn btn-primary  text-center mb-2 ">Start Quiz</button>
+  </form>
+
+</div>
+</div>
+<div class="col-12" *ngIf="isstarted">
+  <div class="top flex align-items-center quizHeader">
+     <div class="">
+        <h1 class="text-center">Welcome <span class="quserName text-success">{{this.empForm.value['name'] }}</span></h1>
+     </div>
+
+  </div>
+  <div>
+    <h1 class="text-danger text-center ">Times Up: {{remintime}}</h1>
+   </div>
+
+  <div class="content" *ngIf="!isfinished" >
+
+    <h2 class="center">{{currentnumber + 1}} .{{totalnumber[currentnumber].question}}</h2>
+    <ul class="list-group">
+      <li  class="list-group-item">
+        <mat-radio-group aria-label="Select an option" [(ngModel)]="favoriteanswer">
+
+          <mat-radio-button [value]="option.isanswer"  *ngFor="let option of totalnumber[currentnumber].answer" class="d-block">{{option.isoption}}</mat-radio-button>
+
+        </mat-radio-group>
+      </li>
+
+    </ul>
+
+
+  </div>
+
+
+
+  <div class="col-12 d-flex align-items-center justify-content-between p-2" >
+    <div>
+      {{currentnumber + 1 }} of {{totalnumber.length}} questions
+    </div>
+    <button class="btn btn-primary" (click)="next()">Submit</button>
+  </div>
+  <div class="text-center">
+    <button class="btn btn-warning" (click)="finish()">Exit</button>
+  </div>
+  </div>
+
+  <div *ngIf="isfinished" class="text-center">
+    <h1 class="text-center text-info">Good <span class="finName">{{this.empForm.value['name'] }}</span></h1>
+    <h1 class="text-center text-success">Your Score is: {{correctanswer}}</h1>
+    <button class="btn btn-primary mb-2" (click)="exit();"> Go to home</button>
+  </div>
+
+
+</div>
+</main>
+
+

@@ -1,0 +1,92 @@
+[
+  {
+  "id":1,
+    "question":"What is php?",
+    "answer":[
+          {
+            "isoption":"All above",
+              "isanswer":false
+          },
+          {
+            "isoption":"Front-End",
+              "isanswer":false
+          },
+          {
+            "isoption":"Hypertext Preprocessor",
+              "isanswer":true
+          }
+    ]
+},
+{
+  "id":2,
+    "question":"What is js?",
+    "answer":[
+      {
+        "isoption":"JavaScript",
+          "isanswer":false
+      },
+      {
+        "isoption":"Scripting language",
+          "isanswer":false
+      },
+      {
+        "isoption":"All above",
+          "isanswer":true
+      }
+]
+},
+{
+  "id":3,
+    "question":"what is sass?",
+    "answer":[
+      {
+        "isoption":"Using for style",
+          "isanswer":true
+      },
+      {
+        "isoption":"It is Backend ",
+          "isanswer":false
+      },
+      {
+        "isoption":"It is Front-End",
+          "isanswer":false
+      }
+]
+},
+{
+  "id":4,
+    "question":"CSS stands for",
+    "answer":[
+      {
+        "isoption":"Cascading Stylesheet",
+          "isanswer":true
+      },
+      {
+        "isoption":"Chart services",
+          "isanswer":false
+      },
+      {
+        "isoption":"Stylesheet of character",
+          "isanswer":false
+      }
+]
+},
+{
+  "id":5,
+    "question":"HTML stand for?",
+    "answer":[
+      {
+        "isoption":"Hyper transfer Making Language",
+          "isanswer":false
+      },
+      {
+        "isoption":" Hyper Text Markup Language",
+          "isanswer":true
+      },
+      {
+        "isoption":"High Transfer Mailing",
+          "isanswer":false
+      }
+]
+}
+]

@@ -1,0 +1,27 @@
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.container{
+  // border: 1px solid #c5c5c5;
+  padding: 10px;
+}
+.quizTitle{
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+.finName{
+  text-transform: capitalize;
+  color: #000;
+}
+.quserName{
+  text-transform: capitalize;
+  text-decoration: double;
+}
+input[type='radio']{
+  accent-color: var(--primary-color);
+}
